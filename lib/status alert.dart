@@ -1,73 +1,76 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.darT';
 import 'package:quickalert/quickalert.dart';
 
-void main() {
-  runApp(const MyApp());
+void main(){
+  runApp(MaterialApp(home: statusalert(),
+  theme: ThemeData(primarySwatch: Colors.blueGrey),));
 }
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class statusalert extends StatefulWidget{
+  statusalert({Key? Key}):super(key: Key);
   @override
-  Widget build (BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo', debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ), // ThemeData
-      home: const MyHomePage(),
-    );
-  }
-}// MaterialApp
-class MyHomePage extends StatefulWidget{
-  const MyHomePage({Key? key}): super(key: key);
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<statusalert> createState() => _statusalertState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _statusalertState extends State<statusalert> {
   void showAlert(QuickAlertType quickAlertType){
     QuickAlert.show(context: context,
-        text: "The Transation Is successful",
-        type: QuickAlertType.success
-    );
+        text: "Transaction is successfull",
+        type: QuickAlertType.success);
   }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(onPressed: (){
-              showAlert(QuickAlertType.success);
-            }, child: Text("SUCCESS"))
+    return Scaffold(appBar: AppBar(title: Text("Status alert"),),
+      body: Center(child: Column(mainAxisAlignment: MainAxisAlignment.center,
+        children: [ElevatedButton(onPressed: () {
+          showAlert(QuickAlertType.success);
+        }, child: Text("Success"),
+        )
+        ],),),);
 
-          ],
-        ),
-      ),
-    );
-  }
-  Card buildButton({
-    required onTap,
-    required title,
-    required text,
-    required leadingIcon,
-  }){
-    return Card(
-      shape: const StadiumBorder(),
-      margin: const EdgeInsets.symmetric(
-          horizontal: 20
-      ),
-      clipBehavior: Clip.antiAlias,
-      elevation: 1,
-
-      child: ListTile(
-        onTap: onTap,
-        leading: leadingIcon,
-        title: Text(title ?? ""),
-        subtitle: Text(text ?? ""),
-        trailing: const Icon( Icons.keyboard_arrow_right_rounded,
-        ),
-      ),//
-    );
   }
 }
+Card buildButton({
+  required onTap,
+  required title,
+  required text,
+  required leadingIcon,
+
+}){
+  return Card(
+    shape: StadiumBorder(),
+    margin: EdgeInsets.symmetric(
+      horizontal: 20
+
+    ),
+    clipBehavior: Clip.antiAlias,
+    elevation: 1,
+
+    child: ListTile(
+      onTap: onTap,
+      leading: leadingIcon,
+      title: Text(title??""),
+      subtitle: Text(text??""),
+      trailing: Icon(Icons.keyboard_arrow_right_outlined),
+    ),
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

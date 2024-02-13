@@ -1,73 +1,53 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-
 void main(){
-  runApp(const MyApp());
-}
+  runApp(const MyApp());}
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  @override
+@override
   Widget build(BuildContext context) {
     return const MaterialApp(debugShowCheckedModeBanner: false,
-      home: MyAnimationPage(),);
-  }
-}
+      home: MyAnimationPage(),);}}
 class MyAnimationPage extends StatefulWidget{
   const MyAnimationPage({super.key});
-
-  @override
-  _MyAnimationPageState createState() =>_MyAnimationPageState();
-  }
-
-  class _MyAnimationPageState extends State<MyAnimationPage>
+ @override
+  _MyAnimationPageState createState() =>_MyAnimationPageState();}
+ class _MyAnimationPageState extends State<MyAnimationPage>
 with SingleTickerProviderStateMixin{
   late AnimationController
   _controller;
   late Animation<double>
   _animation;
-
-  @override
+ @override
   void initState(){
     super.initState();
     _controller =AnimationController(
       duration: const Duration(seconds: 5),
-      vsync: this,
-    );
-    _animation = Tween<double>(begin: 0,end: 6).animate(_controller);
-  }
-
-  @override
+      vsync: this,);
+    _animation = Tween<double>(begin: 0,end: 6).animate(_controller);  }
+ @override
   void dispose(){
     _controller.dispose();
-    super.dispose();
-  }
-
-  @override
+    super.dispose(); }
+      @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: GestureDetector(
           onTap: (){
-            _controller.forward();
-          },
+            _controller.forward(); },
           child:const Text("Flutter Animation")),
-        actions:[
+       actions:[
         GestureDetector(
           onTap: () {
-            dispose();
-          },
+            dispose(); },
       child: Container(
       height: 50,
         width: 50,
-        color: Colors.grey,
-        )
-      ),
+        color: Colors.grey,) ),
           GestureDetector(
             onTap: (){
-              _controller.reverse();
-            },
+              _controller.reverse(); },
             child: Container(
               height: 50,
               width: 50,
@@ -113,5 +93,7 @@ with SingleTickerProviderStateMixin{
     );
     }
 }
+
+
 
 

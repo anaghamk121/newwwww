@@ -23,10 +23,13 @@ class GridViewcount extends StatelessWidget{
         return Card(
           child: Column(
             children: [
-        Image(image: AssetImage(images[index]),),
+        Image(image: AssetImage(images[index]),height: 10,width: 10),
         Row(
           children: [
-            Text(name[index]),
+            Padding(
+              padding:EdgeInsets.only(bottom: 100),
+              child: Text(name[index]),
+            ),
             Text(rate[index]),
           ]
         )

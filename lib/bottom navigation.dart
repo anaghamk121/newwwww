@@ -47,7 +47,7 @@ class  _bottomnavstate extends State<Bottomnav>{
           BottomNavigationBarItem(icon: Icon(Icons.people),label: "people",
               backgroundColor: Colors.lightGreen),
           BottomNavigationBarItem(icon: Icon(Icons.favorite),label: "favorite",
-          backgroundColor: Colors.blueGrey),
+              backgroundColor: Colors.blueGrey),
           BottomNavigationBarItem(icon: Icon(Icons.logout,),label:"logout",
               backgroundColor:Colors.lightBlueAccent ),
         ],

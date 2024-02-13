@@ -5,9 +5,9 @@ void main(){
   runApp(DevicePreview(builder: (BuildContext context)=>MaterialApp(
     useInheritedMediaQuery:true,
     debugShowCheckedModeBanner:false,
-    home: Homepage(),)));
+    home: listhomepage(),)));
 }
-class Homepage extends StatelessWidget{
+class listhomepage extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Scaffold(

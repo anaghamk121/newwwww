@@ -21,7 +21,7 @@ class grid extends  StatelessWidget{
       children:List.generate(5, (index) {
     return Card(
       child: Column(
-          children: [Image(image: AssetImage(images[index],),),
+          children: [Image(image: AssetImage(images[index],),height: 50,width: 50,),
             Text(name[index]
             ),
           ],

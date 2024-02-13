@@ -6,7 +6,8 @@ void main(){
   runApp(DevicePreview(builder: (BuildContext context)=>MaterialApp(
     useInheritedMediaQuery:true,
     debugShowCheckedModeBanner:false,
-    home: tabandbottom(),)));
+    home: tabandbottom(),
+  )));
 }
 class tabandbottom extends StatefulWidget{
   var screen=[];

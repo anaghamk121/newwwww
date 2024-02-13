@@ -1,77 +1,38 @@
-import 'package:flutter/material.dart';
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.darT';
 
-void main() {
-  runApp(MyApp());
+void main(){
+  runApp(DevicePreview(builder: (BuildContext context)=>MaterialApp(
+      useInheritedMediaQuery: true,
+    debugShowCheckedModeBanner: false,
+    home: animatedswitcher(),
+  )));
 }
-
-class MyApp extends StatelessWidget {
+class animatedswitcher extends StatefulWidget{
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: AnimatedSwitcherExample(),
-    );
-  }
+  State<animatedswitcher> createState() => _animatedswitcherState();
 }
-
-class AnimatedSwitcherExample extends StatefulWidget {
-  @override
-  _AnimatedSwitcherExampleState createState() =>
-      _AnimatedSwitcherExampleState();
-}
-
-class _AnimatedSwitcherExampleState extends State<AnimatedSwitcherExample> {
-  bool txt = true; // Track which widget to display
-
-  void btn() {
+class _animatedswitcherState extends State<animatedswitcher> {
+  bool txt =true;
+  void btn(){
     setState(() {
-      txt = !txt; // Toggle between two widgets
+      txt =!txt;
     });
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('AnimatedSwitcher'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            AnimatedSwitcher(
-                duration: Duration(seconds: 2), // Animation duration
-
-                 transitionBuilder: (Widget child,
-                 Animation<double>animation)=>
-                 ScaleTransition(child: child,scale: animation,),
-
-                child: txt ? Container(
-                  key: ValueKey<int>(1), // Unique key
-                  width: 200,
-                  height: 200,
-                  color: Colors.blue,
-                )
-
-                  : Container(
-                key: ValueKey<int>(2), // Unique key
-                 width: 200,
-                  height: 200,
-                  color: Colors.green,
-                ),Image(image: AssetImage("images/cat.png"),height: 300,width: 300,)
-            ),
-         /*   Padding(
-              padding: const EdgeInsets.only(top: 30),
-              child: ElevatedButton(
-                onPressed: btn,
-                child: Text('Toggle Widgets'),
-              ),
-            ),
-          ],*/
-
-      ]
-    ),
-    )
+      appBar: AppBar(backgroundColor: Colors.black87,title: Text("Animated switcher")),
+      body:Center(child: Column(mainAxisAlignment: MainAxisAlignment.center,
+        children: [AnimatedSwitcher(duration: Duration(seconds: 6),transitionBuilder:(Widget child,
+            Animation<double>animation)=>
+            ScaleTransition(child: child,scale: animation,),
+        child: txt ? Container(key: ValueKey<int>(1),
+        width: 200,height: 200,color: Colors.teal,):Container(key: ValueKey<int>(2),)),
+          Center(child: Image(image: AssetImage("images/cat sleep.png"),height: 250,width: 250)),
+        Padding(padding: EdgeInsets.only(top: 30),child: ElevatedButton(onPressed: btn,child: Text("Toggle widgets"),
+        ),)],),) ,
     );
   }
 }

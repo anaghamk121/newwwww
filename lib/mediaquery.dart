@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 
 void main() {
-  //runApp(MaterialApp(home: Homepage(),));
-   runApp(DevicePreview(
+  runApp(MaterialApp(home: Homepage(),));
+ /*  runApp(DevicePreview(
      builder: (BuildContext context) => MaterialApp(
        useInheritedMediaQuery: true,
        home: Homepage(),
@@ -16,26 +16,26 @@ class Homepage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     var _mediaQuery = MediaQuery.of(context); //function create
+*/
 
-
-  //   return Scaffold(
-  //     body: Row(
-  //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-  //       crossAxisAlignment: CrossAxisAlignment.start,
-  //       children: [
-  //         Container(
-  //           width: MediaQuery.of(context).size.width *0.5,
-  //           decoration: BoxDecoration(color: Colors.yellow),
-  //         ),
-  //         Container(
-  //           width: 100,
-  //           decoration: BoxDecoration(color: Colors.red),
-  //         )
-  //       ],
-  //     ),
-  //   );
-  // }
-return Scaffold(
+   return Scaffold(
+       body: Row(
+       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.start,
+         children: [
+          Container(
+            width: MediaQuery.of(context).size.width *0.5,
+          decoration: BoxDecoration(color: Colors.yellow),
+       ),
+          Container(
+  width: 100,
+            decoration: BoxDecoration(color: Colors.red),
+        )
+      ],
+    ),
+   );
+   }
+/*return Scaffold(
    body: Builder(builder: (context){
      if(MediaQuery.of(context).orientation==Orientation.portrait){
        return portraitWidget(_mediaQuery.size);
@@ -47,7 +47,7 @@ return Scaffold(
    ),
  );
 
-}
+}*/
 
    Widget portraitWidget(Size size) {
      return Center(
@@ -61,7 +61,6 @@ return Scaffold(
 
       ),
     );
-   }
    }
   Widget landscapeWidget(Size size) {
      return Center(

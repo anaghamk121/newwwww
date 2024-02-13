@@ -15,7 +15,8 @@ class gridbuilder extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      body: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), itemBuilder:(context,index)
+      body: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        itemBuilder:(context,index)
       {return Card(
         child: Column(children: [
           Image(image: AssetImage(images[index]),height: 100,width: 100),

@@ -1,62 +1,50 @@
-import 'dart:math' as math;
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.darT';
 
-import 'package:flutter/material.dart';
+void main(){
+  runApp(DevicePreview(builder: (BuildContext context)=>MaterialApp(
+    useInheritedMediaQuery: true,
+    debugShowCheckedModeBanner: false,
+    home: animatedbuilder(),
+  )));
+}
+class animatedbuilder extends StatefulWidget{
+  AnimatedBuilder({super.key}) {
+    // TODO: implement AnimatedBuilder
+    throw UnimplementedError();
+  }
+  @override
+  State<animatedbuilder> createState() => _animatedbuilderState();
+}
 
-/// Flutter code sample for [AnimatedBuilder].
-
-void main() => runApp(const AnimatedBuilderExampleApp());
-
-class AnimatedBuilderExampleApp extends StatelessWidget {
-  const AnimatedBuilderExampleApp({super.key});
-
+class _animatedbuilderState extends State<animatedbuilder> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: AnimatedBuilderExample(),
-    );
-  }
+    return Scaffold();
 }
-
-class AnimatedBuilderExample extends StatefulWidget {
-  const AnimatedBuilderExample({super.key});
-
-  @override
-  State<AnimatedBuilderExample> createState() => _AnimatedBuilderExampleState();
-}
-
-/// AnimationControllers can be created with `vsync: this` because of
-/// TickerProviderStateMixin.
-class _AnimatedBuilderExampleState extends State<AnimatedBuilderExample>
-    with TickerProviderStateMixin {
+  with TickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 10),
     vsync: this,
   )..repeat();
 
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
+ @override
+  void dispose(){
+  _controller.dispose();
+  super dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _controller,
-      child: Container(
-        width: 200.0,
-        height: 200.0,
-        color: Colors.green,
-        child: const Center(
-          child: Text('Whee!'),
-        ),
-      ),
-      builder: (BuildContext context, Widget? child) {
-        return Transform.rotate(
-          angle: _controller.value * 2.0 * math.pi,
-          child: child,
-        );
-      },
-    );
+  return AnimatedBuilder(animation: _controller,
+  child: Container(width: 200,height: 200,color: Colors.teal,child:Center(child: Text("whee !"),),),
+  builder:(BuildContext,child){
+  return Transform.rotate(
+  angle:_controller.value * 2.0 * math.pi,
+  child: child,
+  );
   }
-}
+  );
+  }
+  }

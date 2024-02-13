@@ -1,7 +1,8 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'homepage.dart';
+
+import 'homepage1.dart';
 
 void main() {
   runApp(DevicePreview(
@@ -66,7 +67,7 @@ class _LoginpagevalideState extends State<Loginpage_withvalid> {
                             suffixIcon: IconButton(onPressed: () {
                               setState(() {
                                 if (showpass) {
-                                  var showpass = false;
+                                 // var showpass = false;
                                 }
                                 else {
                                     showpass = true;
@@ -96,7 +97,7 @@ class _LoginpagevalideState extends State<Loginpage_withvalid> {
                     ElevatedButton(onPressed: () {
                       final valid=formkey.currentState!.validate();
                       if (valid){
-                        Navigator.push(context,MaterialPageRoute(builder:(context)=>Homepage()));
+                        Navigator.push(context,MaterialPageRoute(builder:(context)=>listhomepage ()));
                           }
                       else{
                         return null;

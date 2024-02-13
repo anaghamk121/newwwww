@@ -35,16 +35,16 @@ class gridviewcustom extends StatelessWidget {
                   color: Colors.grey,
                   child: Column(
                     children: [Expanded(child:Image(image: AssetImage(images[index]),fit:BoxFit.fill)),
-                      SizedBox(
-                        height: 20,
-                      ),
+                       SizedBox(
+                         height: 20,
+                       ),
                       Row(
                         children: [
-                          SizedBox(
-                            width: 80,
+                           SizedBox(
+                             width: 80,
                           ),
                           Text(name[index],style: TextStyle(fontStyle: FontStyle.italic,color: Colors.black),),
-                          SizedBox(width: 25,),
+                          //SizedBox(width: 25,),
                           Text(rate[index],style: TextStyle(fontStyle: FontStyle.italic),),
                         ],
                       )

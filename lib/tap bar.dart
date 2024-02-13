@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'chat list and updates.dart';
 
-
 void main() {
   runApp(DevicePreview(
       builder: (BuildContext context) => MaterialApp(

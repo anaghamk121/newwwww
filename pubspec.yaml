@@ -75,6 +75,8 @@ dependencies:
   scrollable_positioned_list:
   top_snackbar_flutter:
   font_awesome_flutter:
+  http:
+  geolocator:
 
 
 

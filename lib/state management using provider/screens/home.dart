@@ -1,4 +1,4 @@
-/*
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.darT';
 import 'package:newwwww/state%20management%20using%20provider/screens/wishlist.dart';
@@ -71,7 +71,8 @@ class providerhome extends StatelessWidget {
             ])));
   }
 }
-*/
+
+/*
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.darT';
@@ -135,7 +136,8 @@ class providerhome extends StatelessWidget {
                                     context.read<PlantProvider>().removeFromList(plant);
                                   }
                                 },
-                              ),/*leading:  IconButton(
+                              ),*/
+/*leading:  IconButton(
     icon: Icon(Icons.shopping_cart),
     color: plantdata.contains(plant)
     ? Colors.red
@@ -145,11 +147,13 @@ class providerhome extends StatelessWidget {
     context.read<PlantProvider>().addToList(plant);
     } else {
     context.read<PlantProvider>().removeFromList(plant);
-    }})*/
+    }})*//*
+
                             ) );
                         }),
                       ),
                     ),),
             ])));}
 }
+*/
 

@@ -1,4 +1,4 @@
-/*
+
 import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
@@ -29,8 +29,9 @@ class MovieProvider with ChangeNotifier {  // with is a keyword
     notifyListeners();
   }
 }
-*/
 
+
+/*
 
 import 'package:flutter/cupertino.dart';
 import 'package:newwwww/convex%20bot.dart';
@@ -38,9 +39,11 @@ import '../model/movie.dart';
 
 
 final List<Plant> data = List.of(PlantCard(name: '', price: , image: '',) as Iterable<Plant>);
+*/
 /*List.generate(
    20,
-        (index) => Plant(*/
+        (index) => Plant(*//*
+
        // title: "Plant" ));
         //"Movie $index", time: "${Random().nextInt(100) + 60} minute"));
 
@@ -63,3 +66,4 @@ class PlantProvider with ChangeNotifier {
     notifyListeners();
   }
 }
+*/

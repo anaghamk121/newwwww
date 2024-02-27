@@ -1,16 +1,16 @@
-/*
+
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.darT';
 import 'package:provider/provider.dart';
 import '../provider/movie provider.dart';
 
-*/
-/*void main() {
+
+void main() {
   runApp(DevicePreview(
       builder: (BuildContext context) => MaterialApp(
             home: providerwishlist(),
           )));
-}*//*
+}
 
 
 class providerwishlist extends StatelessWidget {
@@ -41,19 +41,22 @@ class providerwishlist extends StatelessWidget {
     );
   }
 }
-*/
+
+/*
 
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.darT';
 import 'package:provider/provider.dart';
 import '../provider/movie provider.dart';
 
+*/
 /*void main() {
   runApp(DevicePreview(
       builder: (BuildContext context) => MaterialApp(
             home: providerwishlist(),
           )));
-}*/
+}*//*
+
 
 class wishlist extends StatelessWidget {
   @override
@@ -82,4 +85,4 @@ class wishlist extends StatelessWidget {
           }),
     );
   }
-}
+}*/
